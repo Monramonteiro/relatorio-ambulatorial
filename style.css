@@ -1,0 +1,213 @@
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .secao-topo {
+      position: relative;
+      width: 100%;
+      max-width: 1280px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .secao-topo img {
+      width: 100%;
+      display: block;
+      max-width: 1280px;
+    }
+
+    h1, h2 {
+      position: absolute;
+      top: 50%;
+      left: 47%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .titulo-principal {
+      font-size: clamp(22px, 5vw, 30px);
+      font-weight: 600;
+      margin: -15px;
+      color: #ffffff;
+      left: 48%
+    }
+
+    .titulo-secundario {
+      font-size: clamp(20px, 4vw, 30px);
+      font-weight: 600;
+      color: #ffdb58;
+    }
+
+    .paragrafo-explicativo {
+      font-size: 20px;
+      width: 800px;
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    .solicitacoes {
+      color: #0e4877;
+      font-weight: 600;
+    }
+
+    span {
+      font-weight: 600;
+    }
+
+    .tabela {
+      max-width: 700px;
+      margin: auto;
+      margin-top: 10px;
+      background-color: #f7f7f7;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #cfcfcf;
+    }
+
+    .tabela-pacientes {
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1;
+      overflow: hidden;
+      box-shadow: 0 2px 8px #0000001a;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    th {
+      background-color: #0e4877;
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #e6e6e6;
+    }
+
+    tr:hover {
+      background-color: #eaf2f8;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .total {
+      background-color: #0e4877;
+      color: #ffdb58;
+      font-weight: 600;
+    }
+
+    .total-consulta {
+      font-size: 15px;
+    }
+
+    .rodape-pagina {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+        margin-top: 5px;
+    }
+
+    .paragrafo-footer {
+        font-size: 15px;
+        text-align: center;
+        padding: 50px;
+        margin-bottom: 20px 0;
+        color: #575757
+    }
+
+    .imagem-rodape {
+        width: 270px;
+        margin-top: -50px;
+    }
+
+    .cabecalho {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      color: #0e4877;
+    }
+
+    .cabecalho-solicitacao {
+      margin-top: 40px;
+    }
+
+    .cabecalho-agendamento {
+      margin-top: 60px;
+    }
+
+    .cabecalho-paciente {
+      margin-top: 60px;
+    }
+
+   /* === RESPONSIVIDADE PARA MOBILE === */
+   
+    @media (max-width: 768px) {
+  
+  .secao-topo {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .titulo-principal {
+    top: 30%;
+    left: 50%;
+    font-size: clamp(18px, 6vw, 26px);
+  }
+
+  .titulo-secundario {
+    top: 55%;
+    left: 50%;
+    font-size: clamp(16px, 5vw, 24px);
+  }
+
+  .paragrafo-explicativo {
+    width: 90%;
+    padding: 0 10px;
+    margin: 20px auto;
+    font-size: 18px;
+  }
+
+  .tabela {
+    width: 90%;
+    padding: 20px;
+  }
+
+  table, th, td {
+    font-size: 16px;
+  }
+
+  .cabecalho {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .paragrafo-footer {
+    font-size: 13px;
+    padding: 20px;
+  }
+
+  .imagem-rodape {
+    width: 180px;
+  }
+}
+
+  
+

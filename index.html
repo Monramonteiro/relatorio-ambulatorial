@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitações Ambulatoriais</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="secao-topo">
+        <img src="img/template Banner.jpg" alt="banner principal">
+        <h1 class="titulo-principal">
+          Relatório Diário
+        </h1>
+        <h2 class="titulo-secundario">
+          Solicitações Ambulatoriais
+        </h2>
+    </header>
+        
+    <div>
+        <p class="paragrafo-explicativo">
+            O relatório abaixo apresenta um resumo das <span class="solicitacoes">SOLICITAÇÕES AMBULATORIAIS</span> registradas no sistema no dia anterior. São detalhadas as quantidades de solicitações em <span>fila</span> ou <span>pendentes</span>, <span>canceladas</span>, <span>agendadas</span> e o total geral de entradas no sistema. Esses dados ajudam a acompanhar a demanda e eficiência do processo de agendamento e atendimento.
+        </p>
+    </div>
+
+    <main>
+    <section class="cabecalho cabecalho-solicitacao">
+      <p class="paragrafo-solicitacao">
+        Solicitações do dia {{ $json.dia_anterior}}
+      </p>
+    </section>
+
+    <div class="tabela tabela-solicitacoes">
+    <table>
+      <thead>
+        <tr>
+          <th>STATUS</th>
+          <th>QUANTIDADE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>EM FILA</td>
+          <td>{{ $json.total_emfila }}</td>
+        </tr>
+         <tr>
+          <td>PENDENTE</td>
+          <td>{{ $json.total_pendentes }}</td>
+        </tr>
+        <tr>
+          <td>CANCELADAS</td>
+          <td>{{ $json.total_cancelados }}</td>
+        </tr>
+        <tr>
+          <td>AGENDADAS</td>
+          <td>{{ $json.total_agendados }}</td>
+        </tr>
+        <tr>
+          <td class="total">TOTAL DE ENTRADAS</td>
+          <td class="total">{{ $json.total_entradas }}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <section class="cabecalho cabecalho-agendamento">
+      <p class="paragrafo-agendamento">
+        Agendamentos de Consultas/Exames do dia {{ $json.dia_anterior}}
+      </p>
+    </section>
+    
+    <div class="tabela tabela-agendamento">
+    <table>
+      <thead>
+        <tr>
+          <th>INDICADOR</th>
+          <th>QUANTIDADE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SOLICITAÇÕES SEM CHECK-IN</td>
+          <td>{{ $json.pacientes_semcheckin }}</td>
+        </tr>
+        <tr>
+          <td>CHEGADAS CONFIRMADAS</td>
+          <td>{{ $json.pacientes_presentes }}</td>
+        </tr>
+        <tr>
+          <td>FALTAS REGISTRADAS</td>
+          <td>{{ $json.pacientes_faltantes }}</td>
+        </tr>
+        <tr>
+          <td class="total total-consulta">TOTAL DE CONSULTAS / EXAMES REALIZADOS</td>
+          <td class="total">{{ $json.total_consultas_exames }}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <section class="cabecalho cabecalho-paciente">
+      <p class="paragrafo-paciente">
+        Total de Pacientes Em Fila e Pendentes no dia {{ $json.dia_anterior}}
+      </p>
+    </section>
+
+    <div class="tabela tabela-pacientes">
+    <table>
+      <thead>
+        <tr>
+          <th>INDICADOR</th>
+          <th>QUANTIDADE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TOTAL EM FILA</td>
+          <td>{{ $json.total_emfila }}</td>
+        </tr>
+        <tr>
+          <td>TOTAL PENDENTES</td>
+          <td>{{ $json.total_pendentes }}</td>
+        </tr>
+        <tr>
+          <td class="total">TOTAL DE SOLICITAÇÕES</td>
+          <td class="total">{{ $json.total_solicitacoes }}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    </main>
+
+    <footer class="rodape-pagina">
+        <p class="paragrafo-footer">
+          Relatório gerado automaticamente no dia {{ $json.data_formatada }} às {{ $json.hora_formatada }}
+        </p>
+        <img class="imagem-rodape" src="img/Avatar_Color_GovRJ.png" alt="logo do governo do estado">
+    </footer>
+</body>
+</html>
