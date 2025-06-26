@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/cbc5b142-47ab-4345-899e-2a6f16086b95" alt="Banner do projeto">
+  <img src="https://github.com/user-attachments/assets/3dc18ff3-85bd-454a-96ea-aca9b77cb417" alt="Banner do projeto">
 </p>
 
 <h1 align="center">Relatório de Solicitações Ambulatoriais</h1>
