@@ -15,7 +15,7 @@
 
 ## 🚀 Como visualizar
 
-Você pode acessar a versão publicada clicando no link abaixo:
+Você pode acessar a versão publicada clicando aqui:
 
 👉 [**Visualizar projeto no GitHub Pages**](https://monramonteiro.github.io/relatorio-ambulatorial/)
 
